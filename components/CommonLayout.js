@@ -134,6 +134,7 @@ const Layout = (props) => {
                         #menuButton {display: inline;position:fixed}
                         #headerRow {display: none;}
                         .hideContent {display: none;}
+                        #externalLinks {margin-top: 10vh;}
                         #contactForm {max-width: 90%; margin:auto;}
                         .projects {font-size: 2vmin; max-width: 90%; margin:auto;}
                         #aboutMePic {opacity: 0.7; min-width:80vw;}
