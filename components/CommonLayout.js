@@ -25,19 +25,7 @@ const Layout = (props) => {
                 crossOrigin="anonymous"
             />
             <title>Ivan Portfolio</title>
-            <link rel="icon" href="/static/images/logoIcon.svg"></link>
-
-            {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-X41SNNFMZY"></script>
-            <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){
-                dataLayer.push(arguments)
-                }
-            gtag('js', new Date());
-
-            gtag('config', 'G-X41SNNFMZY');
-            </script>            
+            <link rel="icon" href="/static/images/logoIcon.svg"></link>            
         </Head>
             <div>
                 <Header />
