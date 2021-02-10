@@ -13,6 +13,7 @@ Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
 const Layout = (props) => {
+    let d = new Date();
 
     return(
         <div>
@@ -35,6 +36,10 @@ const Layout = (props) => {
                     src="/static/images/wallpaper.jpg"
                     alt="wallpaper"
                     /> */}
+                    <div id="attributes">
+                        <footer> <small>&copy; Copyright {d.getFullYear()}, Ivan Johannes</small> </footer>
+                        <div><small>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small></div>
+                    </div>
                 </div>
                 {props.children}
                 <style global jsx>{`
@@ -43,6 +48,22 @@ const Layout = (props) => {
                         color: black;
                         text-shadow: rgb(255, 0, 0, 0.3);
                         background: rgb(255, 0, 0, 0.3);
+                    }
+
+                    #attributes {
+                        position: fixed;
+                        z-index: 4;
+                        bottom: 1vh;
+                        right: 1vw;
+                        color: rgb(70, 60, 60);
+                    }
+
+                    #attributes a {
+                        color: inherit
+                    }
+
+                    #attributes:hover {
+                        color: white;
                     }
 
                     .background {
