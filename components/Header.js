@@ -45,11 +45,11 @@ const openNav = () => {
 const Header = () => {
 
     const Links = linkInfo.map((link) => {
-        return <Link key={link.href} href={link.href}><a className="navLinks">{link.name}</a></Link>
+        return <a key={link.href} href={link.href} className="navLinks">{link.name}</a>
     }) 
 
     const externalLinks = externalLinksinfo.map((link) => {
-        return <Link key={link.name} href={link.href}><a target="_blank" className="externalLinks"><img className="externalLinks" src={link.logo} alt={link.name} /></a></Link>
+        return <a key={link.name} href={link.href} target="_blank" className="externalLinks"><img className="externalLinks" src={link.logo} alt={link.name} /></a>
     })
 
     return (
