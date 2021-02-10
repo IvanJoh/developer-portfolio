@@ -275,14 +275,15 @@ const Layout = (props) => {
                         width: 50vw;
                         position: fixed;
                         bottom: 0vh;
-                        right: 5vh
-
+                        right: 5vh;
+                        z-index: 1;
                     }
 
                     #timeline_img {
                         width: 70%;
                         border-radius: 1vh;
-                        opacity: 0.1
+                        opacity: 0.1;
+                        z-index: 2;
                     }
 
                     #timeline_img:hover {
