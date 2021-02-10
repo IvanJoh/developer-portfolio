@@ -29,12 +29,12 @@ const Layout = (props) => {
             <div>
                 <Header />
                 <div className="background">
-                    <Image
+                    {/* <Image
                     layout="fill"
                     className="object-center object-cover pointer-events-none"
                     src="/static/images/wallpaper.jpg"
                     alt="wallpaper"
-                    />
+                    /> */}
                 </div>
                 {props.children}
                 <style global jsx>{`
@@ -45,22 +45,34 @@ const Layout = (props) => {
                         background: rgb(255, 0, 0, 0.3);
                     }
 
+                    .background {
+                        width: 100vw;
+                        height: 100vh;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-image: linear-gradient(to right, rgb(62, 62, 62), rgb(80, 80, 80), rgb(62, 62, 62), rgb(70, 60, 60));
+                    }
+
                     .movingCharacters:hover {
                         position:relative;
                         top:-0.3em;
-                        transition:0.5s
+                        text-shadow:10px 10px 25px black;
+                        transition:0s
                     }
 
                     .hyperactiveCharacters:hover {
                         position:relative;
                         top:-0.5em;
-                        transition:0.5s
+                        text-shadow:10px 10px 25px black;
+                        transition:0s
                     }
 
                     .lazyCharacters:hover {
                         position:relative;
                         top:-0.1em;
-                        transition:0.5s
+                        text-shadow:10px 10px 25px black;
+                        transition:0s
                     }
 
                     #MainNav {
@@ -225,6 +237,7 @@ const Layout = (props) => {
                     .projects:hover {
                         background-color: rgb(255, 0, 0, 0.2);
                         transition: 0.3s;
+                        box-shadow: 0px 0px 8px 2px rgb(0, 0, 0, 0.4);
                     }
 
                     #headerRow {
@@ -254,7 +267,8 @@ const Layout = (props) => {
                     #timeline_img:hover {
                         width: 75%;
                         opacity: 0.7;
-                        transition: 0.5s
+                        transition: 0.5s;
+                        box-shadow: 0px 0px 8px 4px rgb(0, 0, 0, 0.4);
                     }
 
                     .halfInput,
@@ -273,15 +287,16 @@ const Layout = (props) => {
 
                     #contactForm input:hover,
                     #contactForm textarea:hover {
-                        background-color: rgb(255, 0, 0, 0.6);
+                        background-color: rgb(255, 0, 0, 0.4);
                         transition: 0.3s;
                     }
 
                     #contactForm input:focus,
                     #contactForm textarea:focus {
-                        background-color: rgb(255, 0, 0, 0.4);
+                        background-color: rgb(100, 75, 75, 0.4);
                         outline: none;
                         font-size: medium;
+                        box-shadow: 0px 0px 8px 2px rgb(0, 0, 0, 0.4);
                     }
 
                     #contactForm textarea {

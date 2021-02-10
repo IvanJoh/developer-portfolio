@@ -9,6 +9,7 @@ const showHideTimeline = () => {
         document.getElementById("timeline_img").style.zIndex = 1;
         document.getElementById("timeline_img").style.position = "static";
         document.getElementById("timeline_img").style.opacity = 0.1;
+        document.getElementById("timeline_img").style.boxShadow = "0px 0px 0px 0px grey";
         window.location.reload()
     } else {
         document.getElementById("timeline").firstChild.style.display = "none";
@@ -17,7 +18,8 @@ const showHideTimeline = () => {
         document.getElementById("timeline_img").style.position = "fixed";
         document.getElementById("timeline_img").style.top = "20vh";
         document.getElementById("timeline_img").style.left = "5vw";
-        document.getElementById("timeline_img").style.opacity = 1;}
+        document.getElementById("timeline_img").style.opacity = 1;};
+        document.getElementById("timeline_img").style.boxShadow = "0px 0px 20px 60px rgb(255, 0, 0, 0.4)";
 }
 
 const About = () => {//Some basic about me info inside p tags
