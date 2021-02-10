@@ -1,7 +1,16 @@
 import Header from './Header'
 import Head from 'next/head'
 import Image from 'next/image'
+import Router from 'next/router'
+import NProgress from 'nprogress'
 
+
+Router.onRouteChangeStart = url => {
+    console.log(url);
+    NProgress.start();
+}
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
 const Layout = (props) => {
 
