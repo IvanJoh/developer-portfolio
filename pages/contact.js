@@ -37,8 +37,8 @@ class Contact extends Component {
             message: ""
         });
 
-        fetch('/api/contact', {
-          method: 'post',
+        fetch('/api/send', {
+          method: 'POST',
           headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-Type': 'application/json'
