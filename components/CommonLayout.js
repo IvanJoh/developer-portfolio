@@ -4,7 +4,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Router from 'next/router'
 import NProgress from 'nprogress'
-import { initGA, logPageView } from '../utils/analytics'
 
 
 Router.onRouteChangeStart = url => {
@@ -15,15 +14,6 @@ Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
 class Layout extends React.Component {
-    componentDidMount () {
-      if (!window.GA_INITIALIZED) {
-        initGA()
-        window.GA_INITIALIZED = true
-      }
-      logPageView()
-    }
-
-
     render () {
 
         let d = new Date();
