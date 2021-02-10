@@ -1,5 +1,6 @@
 import Header from './Header'
 import Head from 'next/head'
+import Image from 'next/image'
 
 
 const Layout = (props) => {
@@ -18,7 +19,14 @@ const Layout = (props) => {
         </Head>
             <div>
                 <Header />
-                <div className="background"></div>
+                <div className="background">
+                    <Image
+                    layout="fill"
+                    className="object-center object-cover pointer-events-none"
+                    src="/static/images/wallpaper.jpg"
+                    alt="wallpaper"
+                    />
+                </div>
                 {props.children}
                 <style global jsx>{`
 
@@ -30,13 +38,13 @@ const Layout = (props) => {
 
                     .movingCharacters:hover {
                         position:relative;
-                        top:-0.2em;
+                        top:-0.3em;
                         transition:0.5s
                     }
 
                     .hyperactiveCharacters:hover {
                         position:relative;
-                        top:-0.3em;
+                        top:-0.5em;
                         transition:0.5s
                     }
 
@@ -142,18 +150,6 @@ const Layout = (props) => {
 
                     #contactMe {
                         z-index: 3;
-                    }
-
-                    .background {
-                        background-image: url("/static/images/wallpaper.jpg");
-                        background-repeat: no-repeat;
-                        background-attachment: fixed;
-                        background-position: center;
-                        background-size: cover;
-                        width:100vw;
-                        height:100vh;
-                        position:fixed;
-                        top: 0
                     }
 
                     .first-letter {
