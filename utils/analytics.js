@@ -1,7 +1,7 @@
 import ReactGA from 'react-ga'
 export const initGA = () => {
   console.log('GA init')
-  ReactGA.initialize(process.env.GA_PROPERTY_ID)
+  ReactGA.initialize(`'${process.env.GA_PROPERTY_ID}'`)
 }
 export const logPageView = () => {
   console.log(`Logging pageview for ${window.location.pathname}`)
